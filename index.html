@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Movie Watchlist</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="script" href="script.js"/>
+</head>
+<body>
+  <div class="container">
+    <h1>My Movie Watchlist</h1>
+    <form id="addMovieForm">
+      <input type="text" id="movieInput" placeholder="Enter movie name" autocomplete="off" />
+      <button type="submit">Add Movie</button>
+    </form>
+    <div id="message"></div>
+
+    <section id="watchlistSection">
+      <h2>Watchlist (max 5)</h2>
+      <ul id="watchlist"></ul>
+    </section>
+
+    <section id="waitinglistSection">
+      <h2>Waiting List</h2>
+      <ul id="waitinglist"></ul>
+    </section>
+
+    <section id="watchedlistSection">
+      <h2>Watched Movies</h2>
+      <ul id="watchedlist"></ul>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

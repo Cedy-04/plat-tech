@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: url('aa.jpg') no-repeat center center fixed;
+  background-size: cover;
+  backdrop-filter: brightness(0.4) blur(2px);
+  color: #ffffff;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 30px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 700px;
+  border: 3px solid #801818;
+  box-shadow: 0 0 30px rgba(128, 24, 24, 0.6);
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #ffffff;
+  font-size: 2rem;
+  text-shadow: 0 0 10px #801818;
+  border-bottom: 2px solid #801818;
+  padding-bottom: 10px;
+  position: sticky;
+  top: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 10;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 2px solid #801818;
+  font-size: 16px;
+  background-color: #000;
+  color: #fff;
+}
+
+input:focus {
+  outline: none;
+  border-color: #ffffff;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #801818;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s;
+  box-shadow: 0 0 10px #801818;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: #5f1212;
+}
+
+#message {
+  text-align: center;
+  margin-bottom: 10px;
+  min-height: 20px;
+  font-weight: bold;
+  color: #ffcc00;
+  height: 24px;
+}
+
+section {
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  text-shadow: 0 0 5px #801818;
+  border-left: 4px solid #801818;
+  padding-left: 10px;
+  position: sticky;
+  top: 120px;
+  background: rgba(0,0,0,0.85);
+  z-index: 5;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  max-height: 150px;
+  overflow-y: auto;
+  border: 2px solid #801818;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(128, 24, 24, 0.4);
+  background-color: #111;
+}
+
+/* Scrollbar styling for all lists */
+ul::-webkit-scrollbar {
+  width: 8px;
+}
+ul::-webkit-scrollbar-track {
+  background: #222;
+  border-radius: 4px;
+}
+ul::-webkit-scrollbar-thumb {
+  background-color: #801818;
+  border-radius: 4px;
+  border: 2px solid #222;
+}
+
+/* For Firefox */
+ul {
+  scrollbar-width: thin;
+  scrollbar-color: #801818 #222;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  border-left: 4px solid #801818;
+  font-weight: 500;
+  color: #ffffff;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+li:hover {
+  background-color: #1c1c1c;
+}
+
+.left-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.emoji-icon {
+  font-size: 1.2em;
+}
+
+.movie-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 400px;
+}
+
+.trash-icon {
+  color: #801818;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-left: 15px;
+  flex-shrink: 0;
+}
+
+.trash-icon:hover {
+  color: #ff0000;
+}
+
+#watchlist li .emoji-icon::before {
+  content: "🎬";
+}
+
+#waitinglist li .emoji-icon::before {
+  content: "⏳";
+}
+
+#watchedlist li .emoji-icon::before {
+  content: "✅";
+}
